@@ -61,7 +61,7 @@
 %
 \begin{frame}{Measuring Intergenerational Mobility}
   \begin{itemize}
-  \item Focus on \emph{relative mobility}, which is whether a father's place int he economic distribution matters for the child's place.
+  \item Focus on \emph{relative mobility}, which is whether a father's place in the economic distribution matters for the child's place.
     \vitem Most common relative mobility estimates come from regressing the son's outcome $y_{i, s}$ on the father's outcome, $y_{i, f}$:
     \[
 y_{i, s} = \beta_0 + \gr{\beta_1} y_{i, f} + \varepsilon_{i, s}
@@ -85,7 +85,7 @@ y_{i, s} = \beta_0 + \gr{\beta_1} y_{i, f} + \varepsilon_{i, s}
     \vitem The best way to overcome this measurement error is to average over multiple observations, when data are available.
     \vfill
     \begin{quote}
-      This instability influences mobility estimates: for a sample of white families, going from one snapshot to averaging three father observations increases the father-son association of status by 27 to 32 percent\ldots Assuming classical measurement error, eliminating noies leads to ``true'' father-son associations that are 45 to 56 percent higher than when using one observation.
+      This instability influences mobility estimates: for a sample of white families, going from one snapshot to averaging three father observations increases the father-son association of status by 27 to 32 percent\ldots Assuming classical measurement error, eliminating noise leads to ``true'' father-son associations that are 45 to 56 percent higher than when using one observation.
     \end{quote}
   \end{itemize}
 \end{frame}
@@ -121,7 +121,7 @@ y_{i, s} = \beta_0 + \gr{\beta_1} y_{i, f} + \varepsilon_{i, s}
     \item Initial estimates are only for white males, $\hat{\beta}_1^{\text{white}}$
     \vitem Recall the within-between decomposition,
       \[
-\hat{\beta}_1 = \theta^\text{white}\hat{\beta}_1^\text{white} + \theta^\text{Black}\hat{\beta}_1^\text{black} + \theta^b + \hat{\theta}^b_1
+\hat{\beta}_1 = \theta^\text{white}\hat{\beta}_1^\text{white} + \theta^\text{Black}\hat{\beta}_1^\text{black} + \theta^b  \hat{\beta}^b_1
 \]
 \vitem Now estimate $\hat{\beta}_1$, which will result in a different estimate if within-Black persistence $\hat{\beta}_1^\text{Black}$ is different from within-White persistence, or if between-race persistence $\hat{\beta}^b_1$ is strong
     \end{itemize}
