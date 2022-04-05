@@ -1,0 +1,12 @@
+\documentclass[dvipsnames]{article}
+\input{../../../article_preamble.tex}
+\title{Summary of Feigenbaum (2018)}
+\author{Christopher Ackerman}
+\date{\today}
+\begin{document}
+\maketitle
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
