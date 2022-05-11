@@ -1,0 +1,10 @@
+\documentclass[dvipsnames]{article}
+\title{Econ 242---Assignment 1}
+\input{../../article_preamble.tex}
+\begin{document}
+\maketitle
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,21 @@
+\documentclass[dvipsnames]{article}
+\input{../../../article_preamble.tex}
+\title{Report on Slattery (2020)}
+\author{Christopher Ackerman}
+\date{\today}
+\begin{document}
+\maketitle
+This paper creates a new dataset of subsidy competition among US states, and uses these data to estimate the valuations both firms and states put on a new plant in a new location. The author finds that competition increases welfare, but that most of this welfare is given to firms in the form of subsidies, instead of returned to the state as tax revenue.
+
+The author presents a nice theoretical model that makes clear predictions: if firm valuations and government valuations are positively correlated, then subsidies will not impact firm behavior. If, on the other hand, firm valuations and government valuations are negatively correlated, then subsidy competition can change firm behavior. This is the case---the author finds that 50\% of firms would move to a new state if there were no incentive spending.
+
+To estimate her model, the author needs to identify firms' scoring rule for subsidy/location combinations. She assumes that the winning subsidy is equal to the difference in firm profits from the winning bid and the runner-up bid, so variation in characteristics between winning and runner-up bids allows the author to identify how firms value location characteristics. I'm not sure if this is a novel approach, but it is clearly fitting for this setting and is a great approach.
+
+I have one (somewhat) serious concern about the open-outcry modeling choice. The author claims that governments can see other bids and adjust their bid as they learn about others' valuations, etc. However, it seems unreasonable (from an institutional point of view) to think that governments can costlessly submit infinitely many bids, especially since the bidding process seems fairly complicated (the subsidies are framed as tax rebates, etc.). It seems more reasonable to place some sort of limit(s) on government bid submission, e.g. governments can submit a maximum of 5 bids, or must adjust their bids by less than a certain threshold in each round. This change would weaken identification of governments' valuations and instead lead to set-identified valuations, instead of point-identified valuations. I don't think that the empirical results would be meaningfully weaker, but this would strike me as a more appropriate modeling choice.
+
+My second gripe is with the governor vs. voter valuations. This seems like an entirely natural wedge for public officials, and I can see why this discrepancy could be a very serious problem. However, the paper doesn't spend much time on this issue. Since the paper is a JMP and already quite lengthy, with in-depth sections on methodology and data, I understand this omission, but it would be great to see a more serious consideration of this issue (potentially in a companion paper).
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

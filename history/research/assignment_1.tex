@@ -1,0 +1,61 @@
+\documentclass[dvipsnames]{article}
+\title{Econ 242---Assignment 1}
+\input{../../article_preamble.tex}
+\author{Chris Ackerman}
+\begin{document}
+\maketitle
+\section{Competing Monetary Regimes}
+\subsection{Question}
+What restrictions does a viable alternative currency (bitcoin or some other dominant cryptocurrency) place on the existing dominant currency (US dollar)?
+\subsection{Motivation}
+I'm going to break this into two parts---why other people care, and why this project is interesting to me.
+\begin{itemize}
+\item Originally I started thinking about this question to motivate students in Econ 11 (the class I was TAing). They seemed wildly interested in cryptocurrency but much less interested by the rest of economic theory. I, on the other hand, am interested in applied theory/industrial organization, and pretty apathetic about cryptocurrency, but I did work on a cryptocurrency project before starting my PhD, so at least I know some of the institution details.
+\item I'm mostly interested in this topic as practice (for myself) in applied economic theory. I have to write and present a second-year theory paper for my field requirement, and this seems like a natural question to \emph{try} to build a model for. In particular, during the first year Simon Board mentioned that a lot of applied students come to him in their fifth year with a convoluted model and all sorts of problems that make their JMP much more difficult to parse. I would like to use my second-year theory paper to try and build my own model to answer an applied question, and figure out what problems I encounter along the way. Even though theory is one of my fields, I mainly want to study theory so I can do empirical IO.
+\end{itemize}
+
+\subsection{Feasibility}
+\subsubsection{Theory}
+\begin{enumerate}
+\item  Two players: Fed/government and cryptocurrency
+\item Competing for consumers that need to use money.
+\item Each currency is summarized by its commitment power and flexibility
+\item Flexibility is good because it allows for reactions to unforeseen problems
+\item Commitment is good because it prevents the government from inflating away its debts
+\item Model the cryptocurrency as some sort of perfect Taylor-type rule (I don't know any macro so will read some of their literature and grab something off the shelf)
+  \item Figure out what pairs of novel disturbances (e.g. financial crises, make the flexible government plan more appealing) and inflationary regimes (some measure of the government's abuse of consumers) cause consumers to switch away from the existing regime to the new cryptocurrency
+  \end{enumerate}
+  \subsubsection{Empirics}
+  This bit is much less developed, but the basic idea is to find something that allows me to use a two-player game to model the entire world's currency regime. Obviously this is a simplification. But the first step empirically would be to look at historical data and figure out inflection points when the dominant regime switched, e.g. from Sterling to the USD, and if there's anything about the dominant regime before the inflection point that can hint at why consumers are choosing a new regime (in an ideal world the theoretical model will predict that the dominant regime abuses consumers too much, and once there's a viable outside option they get fed up and switch, and the data will confirm that modeling a single incumbent and single challenger does a reasonably good job of capturing these dynamics).
+  \subsection{Contribution}
+  This provides a nice theoretical framework for thinking about how central banks should think about the disruption caused by non-governmental currencies in the medium term. From a personal interest/topical perspective, current sanctions in Russia are highlighting some of the ways that fiat currencies with a flexible mandate can introduce rules/policies that are detrimental to consumers. From the perspective of Russian citizens/consumers, the ``flexibility'' of the US government to enforce sanctions on US dollar transactions is a huge negative, which makes alternative currencies with a 100\% commitment to an explicit rule more appealing.
+  \newpage
+  \section{Different models of school objectives}
+  \subsection{Question}
+  How do the results for empirical IO estimates of the GE effects of education policies change if we assume that schools aren't profit maximizers, and instead have a different objective?
+  \subsection{Motivation}
+  I came into grad school wanting to study education markets. In particular I really like Chris Neilson's work and have talked to him, and I've seen him present his paper(s) a few times. One of the criticisms I heard during his presentation was, ``Do we really think that schools are maximizing profits?'' This seems like a reasonable criticism, and something that can be extended.
+  \subsection{Feasibility}
+  \subsubsection{Theory}
+  \begin{enumerate}
+  \item Start with the framework in Neilson.
+  \item Write down new objective functions for schools
+    \begin{enumerate}
+    \item Maximizing social welfare
+    \item Maximizing teacher salaries (some sort of agency/capture problem)
+      \item Some combination of profit maximization and one of these
+    \end{enumerate}
+  \end{enumerate}
+  \subsubsection{Empirics}
+  There is already a literature that studies this question in Chile and has all of the data necessary to estimate this model; the only challenge is changing the FOC for firms and re-estimating the model.
+  \subsection{Contribution}
+  Depending on the results, there are two potential outcomes:
+  \begin{enumerate}
+  \item The model of schools' objective function doesn't really matter for the impact of education policy, so the existing findings are robust.
+    \item Changing schools' objective functions results in dramatically different welfare estimates, so it's really important to have a strong institutional reason for whatever FOC you use.
+  \end{enumerate}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

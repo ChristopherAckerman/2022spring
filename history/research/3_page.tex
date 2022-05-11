@@ -1,0 +1,57 @@
+\documentclass[dvipsnames]{article}
+\title{Building a Model of Restrictions on Monetary Policy}
+\input{../../article_preamble.tex}
+\author{Chris Ackerman\thanks{This version of the paper prepared for Econ 242.}}
+\begin{document}
+\maketitle
+\begin{abstract}
+  My goal is to write down a model of currencies competing for consumers that delivers the result that I want. This is primarily an exercise in applied theory; I know what outcome I want, and my goal is to build a model that delivers that result. I have two alternative goals for this model: 1) build the minimal model that delivers this result; 2) build the most realistic model that delivers this result and is still legible. 
+\end{abstract}
+
+\section{Introduction}
+My motivation started with thinking about how cryptocurrencies will impact ``the world''. I think they're largely a hoax, but they present an interesting mechanism for a perfectly committed monetary authority. If (as some of the crypto backers say!) there's an apocalyptic scenario on the horizon where governments can't be trusted and abuse their power to set monetary policy, the option for consumers to switch to a (trusted) cryptocurrency place limits on how abusive governments can be. 
+
+
+My personal goal for this project is to work on my ``modeling muscles''. I want to write down a model that formalizes the way I'm thinking about this problem and delivers some results and insight. I'd also like to see how parsimonious/realistic I can make it, and how difficult it is to derive results as I start adding more ingredients.
+
+
+\section{Related Literature}
+At this point I haven't checked any literature, since my aim is to build a model from scratch and practice my ``modeling skills''. I will definitely check out some macro/finance stuff and try to apply their results off-the-shelf as much as possible. It would be helpful to have something for consumer preferences and currency shock processes, but I don't think I'll need too much else.
+
+\section{Model}
+\subsection{Players}
+\subsubsection{Monetary Authority}
+The key feature of the monetary authority is that it has flexibility---it can respond dynamically to shocks each period, which allows it to update its policy to unforeseen shocks. Since it is of course possible for this policy to perfectly replicate the deterministic policy that the cryptocurrency is following, the monetary authority needs to have some sort of mistake/friction/abuse factor built it, or else nobody would ever choose the cryptocurrency.
+
+
+Potential models of abuse/mistakes:
+\begin{enumerate}
+\item Two different objective functions: one for the government, and one for the consumers. Weights $b$, $1 - b$ on each objective function. Maximize the weighted objective function each period. Government objective function would be something along the lines of inflate away debt/finance pet projects, etc. Could consider extending to include a stock of government debt that makes the weight on the government objective function increasingly large (i.e. the government \emph{needs} to focus more on debt management when its debt servicing costs are super high, so it has less space to enact consumer-optimal policy).
+\item Same two objective functions, but probability $b$ of implementing the consumer-optimizing policy, and probability $1 - b$ of implementing the government-optimizing policy.
+  \item Maximize consumer welfare, but miss with some $\varepsilon$ noise each period. This is probably the easiest: the choice for crypto vs. fiat currency would basically be whenever the government becomes so bad at hitting their target that their own mistakes overwhelm the exogenous noise. But this seems pretty unlikely, because optimal policy should be easier to hit when exogenous shocks are smaller.
+\end{enumerate}
+Other features to consider:
+\begin{enumerate}
+\item Government has a soft bound of keeping a market share $<x\%$.
+\end{enumerate}
+\subsubsection{Cryptocurrency}
+This doesn't necessarily need to be a cryptocurrency, but the key feature of this player is \emph{perfect commitment}. I've chosen cryptocurrencies as a way to motivate this since they can publish white papers and write a code base that follows a perfectly deterministic monetary policy rule.
+\subsubsection{Consumers}
+Consumers want the ``right'' monetary policy. I will need to look up some macro papers for a definition of ``right monetary policy''. A few extensions I could consider:
+\begin{enumerate}
+\item Heterogeneous consumer types. Some consumers value flexibility/certainty more, and thus the result is a \emph{market share} for both the fiat currency and the cryptocurrency instead of a bang-bang solution. This seems like the nicest/most reasonable result, but my concern is that it would be pretty easy to cook up a distribution of consumer types that justifies any $\{$market share, shock process, government abuse$\}$ triple.
+\item Beliefs about the government abuse parameter. Consumers are Bayesians and update their expectations of government abuse over time. Governments can be good/bad in different periods, but need to do just enough to assuage consumers' fears. This would still lead to a bang-bang solution but consumers would take expectations over time about future behavior instead of making a choice each period.
+  \item Switching costs. Switching from fiat $\to$ crypto, or crypto $\to$ fiat, has some cost. This would allow for the current fiat currency dominance to persist even if governments are very, very bad, but would make any switch much more persistent and harder for the government to undo in the future.
+    \item Portfolio problem. Allow consumers to hold both currencies, but adjust the relative holdings of each one to reflect diversification and the relative merits of each. This seems the most reasonable, and if there's a very simple way to include this I would like it, but it seems likely to really weaken the results/limits placed on the government. Unless I change the government's goal to be something like ``keep at least a 99\% market share''.
+\end{enumerate}
+
+\subsection{Shocks to money demand}
+I will likely start with a normal distribution of shocks since that leads to analytical solutions and is easy to model. I know that it's very, very easy to reject a normal distribution of shocks because the tail behavior isn't right, but I'm happy to use any other distribution with a nice closed form expression. The closed form bit is pretty important for a sharp theoretical result. The other extreme is to use some sort of kernel approximation of the actual shock process that we see. This wouldn't really lend itself to a theory paper, but I could say something like, ``How much  smaller (in absolute magnitude) would this distribution of shocks have to be for consumers to switch?''
+
+\section{Results}
+Focusing on the case with normal shocks and some $b$ representing the weight on consumer-optimal decision making, smaller values of $\sigma$ for the disturbance process should lead to a higher $b$ being necessary for consumers to choose the fiat currency instead of the cryptocurrency. The logic is simple: with smaller shocks, the deterministic rule isn't missing optimal policy by very much, so the government needs to put a very high weight on consumer outcomes to beat the deterministic policy. On the other hand, if there are very large shocks then the flexibility is really important, so the government can take advantage of volatility in the market to fulfill its own objectives.
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

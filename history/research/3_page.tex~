@@ -1,0 +1,14 @@
+\documentclass[dvipsnames]{article}
+\title{A model of competing currencies}
+\input{../../article_preamble.tex}
+\author{Chris Ackerman\thanks{This version of the paper prepared for Econ 242.}}
+\begin{document}
+\maketitle
+\begin{abstract}
+  My goal is to write down a model of currencies competing for consumers that delivers the result that I want.
+\end{abstract}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,29 @@
+\documentclass[dvipsnames]{article}
+\input{../../../article_preamble.tex}
+\title{Summaries of Stephens and Yang (2014) and J\`acome, Kuziemko and Naidu (2021)}
+\author{Christopher Ackerman}
+\date{\today}
+\begin{document}
+\maketitle
+\section{Stephens and Yang (2014)}
+This paper re-examines existing evidence on the returns to education. Prior work used compulsory schooling laws as an instrument for years of schooling. This identification strategy relies on a parallel-trends assumption across US states, which this paper refutes.
+
+This paper is a very nice contribution and highlights the care that needs to be taken when doing applied work in a complicated historical setting. Much applied work uses far-out instruments and a tenuous identification strategy. This paper addresses a body of literature that uses a much more standard identification strategy: policy variation across states. While this is commonly used and accepted in applied work, the authors point out that context is still incredibly important, and IV isn't a cure-all.
+
+After taking the idea of differential trends seriously, the authors find that the returns to schooling from compulsory education laws are much smaller than previously estimated. This makes an important methodological point: the historical context surrounding your IV strategy is important. In this case, states had wildly different education quality before compulsory schooling laws, and made improvements to their education systems at different rates. But this paper is even better than that---its results on the returns to education are independently interesting and have a useful economic interpretation. The authors find that forcing children to attend school does not increase their earnings or other meaningful outcomes, and the authors' preferred interpretation is that families were making (nearly) optimal investments in education before compulsory schooling laws.
+
+\newpage
+
+\section{J\`acome, Kuziemko and Naidu (2021)}
+This paper adds to the IGE literature we have already reviewed in class. The big distinction is that these authors use survey data instead of census data. Although this data is less reliable, it allows for a much more comprehensive overview of the US population. The biggest contribution is providing a much clearer view of mobility for minority and disadvantaged segments of the population, which meaningfully changes how we think about US mobility over time. This paper goes beyond the existing literature by including not just black men, but women too.
+
+The authors attempt to mitigate the concerns surrounding survey data. They pool multiple surveys to limit sampling noise, and they are careful to avoid making causal claims. The authors use all available surveys that ask for current income, fathers' occupation, race, and region. To avoid life-cycle concerns, they limit their focus to respondents in their prime-age years. Individually, each survey has a much easier time gathering a representative cross-section than PSID or other longitudinal data does. Other papers (Ward and Collins and Wanamaker) add census data on Black men, but they need to over-weigh the sample of Black men because these census records are incredibly difficult to link. Using survey data gets around this issue, but there is the trade-off of less reliable income data.
+
+The paper's main finding is an increase in IGE between the 1910 and 1940 cohorts. The authors run a number of robustness checks and present a convincing argument that this pattern holds regardless of different controls. Then, the authors discuss mobility estimates for different subgroups. They do this additively, starting with white men and then adding additional data, and examine how their mobility estimates change. This is a very nice exercise and clearly highlights the importance of considering different subpopulations. Adding white women does not meaningfully change IGE estimates, but adding Black men and women significantly increases persistence. Even though Blacks are only 10\% of the population, they are born into disproportionately disadvantaged groups and have a large impact on overall estimates. Looking at the \emph{level} of intergenerational mobility, excluding Black men and women paints an overly optimistic picture. Since Blacks were much less mobile in absolute terms, moving to a representative sample increased persistence. However, excluding data on Black men and women paints an overly pessimistic view of the \emph{change} in intergenerational mobility over time. Adding data on Blacks results in a larger decline in the rank-rank correlation over time, since this richer data set is able to capture Black-white convergence.
+
+This paper makes an important and very clear contribution to the literature. It is up-front about the shortcomings of the data it uses, but also performs a number of robustness checks and explains why the pitfalls of survey data are worth the extra work. Their newly constructed representative sample of the US population enriches our understanding of both the level and change in IGE over time, and presents results that are meaningfully different from existing estimates.
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

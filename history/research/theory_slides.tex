@@ -1,0 +1,140 @@
+\documentclass[dvipsnames]{beamer}
+\input{../../slides_preamble.tex}
+\newcommand{\var}{\operatorname{var}}
+\title{Cryptocurrency as a (Committed) Alternative Currency}
+\author{Chris Ackerman}
+\begin{document}
+\maketitle
+\begin{frame}{Motivation---What am I trying to model?}
+  \begin{itemize}
+  \item I want a disciplined way to think about what the ``rise of cryptocurrency'' \emph{could} mean for government currencies.
+    \vitem The feature of cryptocurrencies that I find most interesting is smart contracts; i.e. can credibly commit to follow a specific policy.
+    \vitem Would like to see how this imposes some restrictions on what government monetary policy can do
+    \begin{itemize}
+    \item Normally government currencies are ``credible'', but here their key feature is ``flexibility''---they can react to unforeseen circumstances but don't have the same strength of commitment power
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Motivation---What do \textbf{\emph{I}} want to learn from this project?}
+  \begin{itemize}
+  \item What's the simplest model I can write down to deliver the result(s) that I want?
+    \vitem What do ``clean results'' and a legible model look like?
+    \vitem What do I have to do to make my basic model more realistic, and what is the trade-off?
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Model Ingredients}
+ Players:
+    \begin{itemize}
+    \item Monetary authority
+      \begin{itemize}
+      \item Perfect flexibility
+        \item Imperfectly aligned incentives
+        \end{itemize}
+      \item Cryptocurrency
+        \begin{itemize}
+        \item No flexibility/perfect commitment
+          \item Can choose optimal (in expectation) policy for consumers 
+        \end{itemize}
+    \end{itemize}
+    \vfill
+    Consumers:
+    \begin{itemize}
+    \item Have an optimal monetary demand/quantity
+      \item Some penalty function for missing the optimal policy
+      \item Choose between the monetary authority and cryptocurrency
+        \item Needs to have some sort of shock so that the cryptocurrency can't hit the optimal demand each period
+    \end{itemize}
+    \vfill
+\end{frame}
+%
+\begin{frame}{Monetary Authority}
+  \begin{itemize}
+  \item Perfectly flexible; can set any quantity or policy it wants each period
+    \vitem Needs some sort of friction/wedge to give the consumers a reason to choose
+\vitem Government has some incentive to follow some other rule
+\[
+  y_t = \left\{
+    \begin{array}{ll}
+      y_t^{opt}& \text{ with prob }p\\
+      y_t^{alt}& \text{ with prob } 1 - p
+    \end{array}
+  \right.
+\]
+\vitem Restriction is on how small $p$ can be
+\vitem Need to specify some $y^{alt}$ (probably just $y^{alt} > y^{opt}$ to inflate away some debt), but anything more complicated I would want to read macro papers for
+%     \vitem Option one: government is just bad at setting policy
+%     \[
+% y_t = y_t^{opt} + \varepsilon_t
+% \]
+% \vitem Restriction ends up on how big $\varepsilon_t$ can be; the government can't be ``too bad''
+% \vitem Does not need an exogenous shock process
+\end{itemize}
+\end{frame}
+%
+% \begin{frame}{Monetary Authority}
+%   \begin{itemize}
+% \vitem More realistic, but need to add exogenous shocks
+%   \end{itemize}
+% \end{frame}
+%
+\begin{frame}{Cryptocurrency}
+  \begin{itemize}
+  \item Can set any deterministic rule that it wants, but cannot change in response to shocks
+    \vitem The feature I really want to capture is \emph{perfect commitment}
+    \[
+y_t = (1 + i) y_{t - 1}
+\]
+\vitem Easiest approach seems to be to set this rule exactly the same as the consumer's optimal policy, without the exogenous shock---then only the shocks are creating wedges, not sub-optimal cryptocurrency rules
+\vitem Could also do a more complicated rule from macro literature if that would be interesting
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Consumers}
+  \begin{itemize}
+  % \item If the government is just making mistakes, consumers can choose the better currency each period and the solution should be a simple restriction on the size of $\varepsilon$
+    \vitem A government that chooses to enact different policy with some probability requires consumers with beliefs about the true $p$ and shocks to consumer demand for currency
+    \begin{itemize}
+    \item Bayesian updating for consumer beliefs about $p$
+      \[
+y_t = (1 + i) y_{t - 1} + \varepsilon
+      \]
+    \end{itemize}
+    \vitem I would like to avoid any explicit model of demand for currency; rather focus on the size/distribution of shocks
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Results}
+  \begin{itemize}
+  % \item With the ``bad government'' model, should just be a restriction on the size of $\varepsilon$
+    \vitem Should be a restriction on possible pairs of $\{p, \varepsilon\}$
+    \begin{itemize}
+    \item If there are big exogenous shocks to the optimal money supply, then the government's flexibility is more valuable, and they can abuse the consumers by more without losing market share.
+    \end{itemize}
+    \vitem What do ``clean results'' look like, and what would be a satisfying conclusion?
+    \begin{itemize}
+    \item When is it appropriate to start imposing distributional assumptions for $\varepsilon$?
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Possible Directions}
+  \begin{itemize}
+  \item I would like to add heterogeneous agents
+    \vitem Goal is to get some agents to switch to the cryptocurrency earlier
+    \vitem Ideally could calibrate this switching to market share(s) of cryptocurrency to match the ``rise'' of fully committed alternative currencies
+  \end{itemize}
+  \vfill
+  Some other options:
+  \begin{itemize}
+  \item Portfolio problem; let agents hold both currencies
+    \vitem Debt stock and dynamic problem for the government
+    \vitem Some attempt to capture commitment power of the government
+  \end{itemize}
+\end{frame}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
