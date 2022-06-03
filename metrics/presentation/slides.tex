@@ -1,0 +1,177 @@
+\documentclass[dvipsnames]{beamer}
+\input{../../slides_preamble.tex}
+\title{Early Life Circumstance and Adult Mental Health\\Adhvaryu, Fenske and Nyshadham, \emph{JPE} (2019)}
+\author{Chris Ackerman}
+\begin{document}
+\maketitle
+
+\begin{frame}{Overview}
+  \begin{itemize}
+  \item \textbf{Question:} How do childhood circumstances affect mental health as an adult?
+    \vitem \textbf{Approach:} Diff-in-Diff, look at cocoa producing regions in Ghana.
+    \vitem \textbf{Why it's special:} Mediation is really cool; can use Rodrigo's research to extend a basic diff-in-diff and get your paper published in the \emph{JPE}.
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Setting---Mental Health}
+  \begin{itemize}
+  \item How does circumstance in early life affect psychological distress in adulthood?
+    \vitem Depression generates losses of about 55.5 million DALYs in low- and middle-income countries.
+    \vitem Use Kessler Psychological Distress Scale (K10); index of anxiety-depression mental distress
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Setting---Cocoa in Ghana}
+    \begin{figure}[htp]
+      \centering
+      \includegraphics[width=.7\textwidth, keepaspectratio=true]{fig1.png}
+    \end{figure}
+  \begin{itemize}
+  \item Households in the cocoa-producing regions of Ghana experience changes in the real producer price of cocoa as income shocks
+    \begin{itemize}
+    \item Households in regions that do not produce cocoa are unaffected
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}{Setting---Cocoa in Ghana}
+    \begin{figure}[htp]
+      \centering
+      \includegraphics[width=\textwidth, keepaspectratio=true]{fig2.png}
+    \end{figure}
+\end{frame}
+%
+\begin{frame}{Setting---Cocoa in Ghana}
+    \begin{figure}[htp]
+      \centering
+      \includegraphics[width=\textwidth, keepaspectratio=true]{fig3.png}
+    \end{figure}
+    \end{frame}
+    %
+    \begin{frame}{Empirical Strategy}
+      \begin{itemize}
+      \item Children born to households in cocoa-growing regions during periods of high cocoa prices will have more resources
+        \begin{itemize}
+        \item Could have large impacts on mental health later in life
+        \end{itemize}
+        \vfill
+        \[
+\begin{aligned}
+\text { Outcome }_{i r t}=& \alpha+\beta \ln \left(\text { Cocoa Price }_{t}\right) \times \text { Cocoa Producer }_{r} \\
+&+x_{i r t}^{\prime} \gamma+\delta_{r}+\eta_{t}+\epsilon_{i r t}
+\end{aligned}
+        \]
+        \vitem Outcome$_{irt}$ is the outcome for individual $i$ in region $r$, year $t$
+        \begin{enumerate}
+        \item Natural log of individual's response on Kessler Psychological Distress Scale
+          \item Dummy for whether the score was 30 or above
+        \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    %
+    \begin{frame}{}
+      \begin{figure}[htp]
+        \centering
+      \includegraphics[height=\textheight, keepaspectratio=true]{tab1.png}  
+      \end{figure}
+    \end{frame}
+    %
+    \begin{frame}{Results (highlights)}
+      \begin{itemize}
+      \item Higher cocoa prices reduce mental distress; robust across specifications
+        \vitem One SD price shock decreases severe mental distress by 3 percentage points (almost half the mean)
+        \vitem Estimates from logit specification are about half as large as the results from the LPM
+        \begin{itemize}
+        \item Still statistically significant, and still large relative to baseline
+        \end{itemize}
+      \end{itemize}
+    \end{frame}
+    %
+    \begin{frame}{Results---K10 Outcomes}
+      \begin{figure}[htp]
+        \centering
+      \includegraphics[width=\textwidth, keepaspectratio=true]{tab2.png}  
+      \end{figure}
+    \end{frame}
+    %
+    \begin{frame}{Mediation Analysis}
+      \begin{itemize}
+      \item Methodology from Heckman, Pinto, Savelyev (2013)
+        \vitem Application of inverse probability weighting from Huber (2014)
+        \vitem Three key assumptions:
+        \begin{enumerate}
+        \item Conditional independence of treatment (same as main identifying assumption)
+        \item Conditional independence of mediator (may be violated; that's why they use inverse probability weighting)
+          \item Common support (no mediator perfectly predicts treatment)
+        \end{enumerate}
+        \vitem Don't have enough data to deal with measurement error
+        \vitem N.B. chose inverse probability weighting after looking at multiple approaches from Huber (2016); inverse probability weighting worked the best
+      \end{itemize}
+    \end{frame}
+    %
+    \begin{frame}{Mediation Analysis}
+      Potential Mediators:
+      \begin{enumerate}
+      \item Cash savings
+      \item Physical assets
+      \item Self-employment
+      \item English literacy
+      \item BMI
+        \item Height
+        \end{enumerate}
+        \begin{itemize}
+          \vitem These mediators account for 10\% of the total treatment effect.
+          \vitem Remaining treatment effect is either the direct effect, or mediated by something outside the data set.
+        \end{itemize}
+    \end{frame}
+    %
+    \begin{frame}{Mediation Analysis}
+      \begin{figure}[htp]
+        \centering
+       \includegraphics[width=\textwidth, keepaspectratio=true]{tab5-1.png} 
+      \end{figure}
+      \vspace{-3em}
+      \begin{figure}[htp]
+        \centering
+       \includegraphics[width=\textwidth, keepaspectratio=true]{tab5-2.png} 
+      \end{figure}
+    \end{frame}
+    %
+    \begin{frame}
+      \begin{figure}[htp]
+        \centering
+        \includegraphics[height=\textheight, keepaspectratio=true]{fig4.png}
+      \end{figure}
+    \end{frame}
+    %
+    \begin{frame}{Other Mechanisms}
+      \begin{itemize}
+      \item Parental weight and BMI are improved by contemporaneous positive cocoa price shocks
+        \vitem Positive (but imprecise) estimates for labor force participation, and substantial impacts on agricultural self-employment
+        \vitem Authors interpret this as supporting evidence that impacts on mental health are coincident with improved labor, education and economic outcomes
+        \vitem These estimates come from alternative datasets and \rd{cannot} be included in a proper mediation analysis
+      \end{itemize}
+    \end{frame}
+    %
+    \begin{frame}{Other Mechanisms}
+      \begin{figure}[htp]
+        \centering
+       \includegraphics[width=\textwidth, keepaspectratio=true]{tab6-1.png} 
+      \end{figure}
+      \vspace{-1em}
+      \begin{figure}[htp]
+        \centering
+       \includegraphics[width=\textwidth, keepaspectratio=true]{tab6-2.png} 
+      \end{figure}
+    \end{frame}
+    %
+    \begin{frame}{Conclusion}
+      \begin{itemize}
+      \item Cocoa price shocks generate income shocks for Ghanaian families
+        \vitem Use diff-in-diff to see how cocoa producers benefit from this additional income
+        \vitem The authors go beyond this---mediation analysis to figure out what mechanisms are accounting for the results from the diff-in-diff
+        \vitem Mechanisms in the mediation analysis can only explain 10\% of the treatment effect
+        \vitem Use additional data to investigate other mechanisms (but can't include these in mediation analysis)
+      \end{itemize}
+    \end{frame}
+\end{document}
